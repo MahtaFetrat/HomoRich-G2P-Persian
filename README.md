@@ -1,0 +1,1 @@
+# HomoRich-G2P-Persian
