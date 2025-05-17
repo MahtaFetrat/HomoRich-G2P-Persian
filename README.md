@@ -7,17 +7,20 @@ HomoRich is the first large-scale, sentence-level Persian homograph dataset desi
 The dataset contains 528,891 annotated Persian sentences (327,475 homograph-focused) covering 285 homograph words with 2-4 pronunciation variants each. Variants are equally represented (~500 samples each) to mitigate bias. The composition blends multiple sources for diversity, as shown below:
 
 <div align="center">
-  <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 10px; flex-wrap: wrap;">
-    <!-- Distribution Plot -->
-    <div style="text-align: center;">
-      <img src="https://github.com/MahtaFetrat/HomoRich-G2P-Persian/blob/main/assets/composition-figure.png" width="400"/>
+  
+<table style="border: none; border-collapse: collapse; margin: 0 auto;">
+  <tr style="border: none;">
+    <td style="border: none; padding: 0 10px; text-align: center;">
+      <img src="./assets/composition-figure.png" width="400"/>
       <p style="margin-top: 5px;">Distribution of data sources in HomoRich dataset</p>
-    </div>
-    <div style="text-align: center;">
-      <img src="https://github.com/MahtaFetrat/HomoRich-G2P-Persian/blob/main/assets/composition-table.png" width="362"/>
+    </td>
+    <td style="border: none; padding: 0 10px; text-align: center;">
+      <img src="./assets/composition-table.png" width="362"/>
       <p style="margin-top: 5px;">The source for different parts of the HomoRich dataset</p>
-    </div>
-  </div>
+    </td>
+  </tr>
+</table>
+
 </div>
 
 
@@ -30,16 +33,20 @@ Persian G2P systems use two common phoneme formats:
 The HomoRich dataset includes both formats for broad compatibility. Below is a visual comparison:
 
 <div align="center">
-  <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 10px;">
-    <div style="text-align: center;">
-      <img src="https://github.com/MahtaFetrat/HomoRich-G2P-Persian/blob/main/assets/our-repr.png" width="400"/>
+
+<table style="border: none; border-collapse: collapse; margin: 0 auto; width: auto;">
+  <tr style="border: none;">
+    <td style="border: none; padding: 0 10px; text-align: center;">
+      <img src="./assets/our-repr.png" width="400"/>
       <p style="margin-top: 5px;">Repr. 1</p>
-    </div>
-    <div style="text-align: center;">
-      <img src="https://github.com/MahtaFetrat/HomoRich-G2P-Persian/blob/main/assets/ge2pe-repr.png" width="400"/>
+    </td>
+    <td style="border: none; padding: 0 10px; text-align: center;">
+      <img src="./assets/ge2pe-repr.png" width="400"/>
       <p style="margin-top: 5px;">Repr. 2</p>
-    </div>
-  </div>
+    </td>
+  </tr>
+</table>
+
 </div>
 
 ---
