@@ -93,6 +93,12 @@ TODO: citation to paper arxiv
 
 ---
 
+## Contributions
+
+Contributions and pull requests are welcome. Please open an issue to discuss the changes you intend to make.
+
+---
+
 ### Additional Links  
 - [Paper PDF](#) (TODO: link to paper)  
 - [HomoFast eSpeak NG](#) (TODO: link to repo)  
