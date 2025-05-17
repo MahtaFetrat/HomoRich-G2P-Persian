@@ -62,12 +62,8 @@ dataset = load_dataset("MahtaFetrat/HomoRich")
 ```
 
 **Option 2: From this repository**  
-The dataset files are available in the `data` folder as:
-- `part_01.parquet`
-- `part_02.parquet` 
-- `part_03.parquet`
 
-You can access them directly from the [data directory](./data) of this repository.
+You can access the dataset files directly from the [data folder](./data) of this repository.
 
 ### Example Use Case: Homograph Disambiguation  
 ```python  
