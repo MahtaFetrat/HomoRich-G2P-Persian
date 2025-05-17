@@ -1,1 +1,96 @@
-# HomoRich-G2P-Persian
+# HomoRich: A Persian Homograph Dataset for G2P Conversion  
+
+HomoRich is the first large-scale, sentence-level Persian homograph dataset designed for grapheme-to-phoneme (G2P) conversion tasks. It addresses the scarcity of balanced, contextually annotated homograph data for low-resource languages. The dataset was created using a semi-automated pipeline combining human expertise and LLM-generated samples, as described in the paper:  
+**"Fast, Not Fancy: Rethinking G2P with Rich Data and Rule-Based Models"**.  
+
+## Overview 
+The dataset contains 528,891 annotated Persian sentences (327,475 homograph-focused) covering 285 homograph words with 2-4 pronunciation variants each. Variants are equally represented (~500 samples each) to mitigate bias. The composition blends multiple sources for diversity, as shown below:
+
+<div align="center">
+  <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 10px; flex-wrap: wrap;">
+    <!-- Distribution Plot -->
+    <div style="text-align: center;">
+      <img src="https://github.com/MahtaFetrat/HomoRich-G2P-Persian/blob/main/assets/composition-figure.png" width="400"/>
+      <p style="margin-top: 5px;">Distribution of data sources in HomoRich dataset</p>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://github.com/MahtaFetrat/HomoRich-G2P-Persian/blob/main/assets/composition-table.png" width="362"/>
+      <p style="margin-top: 5px;">The source for different parts of the HomoRich dataset</p>
+    </div>
+  </div>
+</div>
+
+
+### Phoneme Representations:
+Persian G2P systems use two common phoneme formats:
+
+- Repr. 1: Used in [KaamelDict](https://huggingface.co/datasets/MahtaFetrat/KaamelDict) and [SentenceBench](https://huggingface.co/datasets/MahtaFetrat/SentenceBench) (compatible with prior studies)
+- Repr. 2: Adopted by [GE2PE](https://github.com/Sharif-SLPL/GE2PE) (state-of-the-art model enhanced in this work)
+
+The HomoRich dataset includes both formats for broad compatibility. Below is a visual comparison:
+
+<div align="center">
+  <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 10px;">
+    <div style="text-align: center;">
+      <img src="https://github.com/MahtaFetrat/HomoRich-G2P-Persian/blob/main/assets/our-repr.png" width="400"/>
+      <p style="margin-top: 5px;">Repr. 1</p>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://github.com/MahtaFetrat/HomoRich-G2P-Persian/blob/main/assets/ge2pe-repr.png" width="400"/>
+      <p style="margin-top: 5px;">Repr. 2</p>
+    </div>
+  </div>
+</div>
+
+---
+
+## Usage  
+### Loading the Dataset  
+The dataset is available both on Hugging Face and in this repository:
+
+**Option 1: From Hugging Face**  
+```python
+from datasets import load_dataset  
+dataset = load_dataset("MahtaFetrat/HomoRich")  
+```
+
+**Option 2: From this repository**  
+The dataset files are available in the `data` folder as:
+- `part_01.parquet`
+- `part_02.parquet` 
+- `part_03.parquet`
+
+You can access them directly from the [data directory](./data) of this repository.
+
+### Example Use Case: Homograph Disambiguation  
+```python  
+TODO  
+```
+---
+
+## Benchmarks  
+The dataset was used to improve:  
+1. **Homo-GE2PE** (Neural T5-based model): **76.89% homograph accuracy** (29.72% improvement).  
+2. **HomoFast eSpeak** (Rule-based): **74.53% accuracy** with real-time performance (30.66% improvement).  
+
+See [paper Table 3](#) for full metrics.  
+
+---
+
+## License  
+- **Dataset**: Released under **CC0-1.0** (public domain).  
+- **Code/Models**: **MIT License** (where applicable).  
+
+---
+
+## Citation  
+```bibtex  
+TODO: citation to paper arxiv
+```
+
+---
+
+### Additional Links  
+- [Paper PDF](#) (TODO: link to paper)  
+- [HomoFast eSpeak NG](#) (TODO: link to repo)  
+- [Homo-GE2PE Model](#) (TODO: link to repo)  
