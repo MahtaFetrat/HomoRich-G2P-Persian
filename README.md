@@ -59,7 +59,7 @@ The dataset is available both on Hugging Face and in this repository:
 **Option 1: From Hugging Face**  
 ```python
 from datasets import load_dataset  
-dataset = load_dataset("MahtaFetrat/HomoRich")  
+dataset = load_dataset("AnonymousOwner/HomoRich")  # To be updated
 ```
 
 **Option 2: From this repository**  
