@@ -1,7 +1,7 @@
 # HomoRich: A Persian Homograph Dataset for G2P Conversion  
 
 HomoRich is the first large-scale, sentence-level Persian homograph dataset designed for grapheme-to-phoneme (G2P) conversion tasks. It addresses the scarcity of balanced, contextually annotated homograph data for low-resource languages. The dataset was created using a semi-automated pipeline combining human expertise and LLM-generated samples, as described in the paper:  
-*[Fast, Not Fancy: Rethinking G2P with Rich Data and Rule-Based Models](TODO)*.  
+*[Fast, Not Fancy: Rethinking G2P with Rich Data and Rule-Based Models](https://arxiv.org/abs/2505.12973)*.  
 
 ## Overview 
 The dataset contains 528,891 annotated Persian sentences (327,475 homograph-focused) covering 285 homograph words with 2-4 pronunciation variants each. Variants are equally represented (~500 samples each) to mitigate bias. The composition blends multiple sources for diversity, as shown below:
@@ -85,9 +85,9 @@ See [paper Table 3](#) for full metrics.
 
 The `scripts` folder contains two key notebooks used in the dataset creation and processing pipeline:
 
-1. `Generate\_Homograph\_Sentences.ipynb`: This notebook implements the prompt templates used to generate homograph-focused sentences as described in the paper, *[Fast, Not Fancy: Rethinking G2P with Rich Data and Rule-Based Models.](TODO)*
+1. `Generate\_Homograph\_Sentences.ipynb`: This notebook implements the prompt templates used to generate homograph-focused sentences as described in the paper, *[Fast, Not Fancy: Rethinking G2P with Rich Data and Rule-Based Models.](https://arxiv.org/abs/2505.12973)*
 
-2. `Phonemize\_Sentences.ipynb`: This notebook applies the phonemization process based on the LLM-powered G2P method detailed in the *[LLM-Powered Grapheme-to-Phoneme Conversion: Benchmark and Case Study](TODO)* paper.
+2. `Phonemize\_Sentences.ipynb`: This notebook applies the phonemization process based on the LLM-powered G2P method detailed in the *[LLM-Powered Grapheme-to-Phoneme Conversion: Benchmark and Case Study](https://ieeexplore.ieee.org/abstract/document/10888370)* paper.
 
 ---
 
@@ -99,7 +99,15 @@ The `scripts` folder contains two key notebooks used in the dataset creation and
 
 ## Citation  
 ```bibtex  
-TODO: citation to paper arxiv
+@misc{qharabagh2025fastfancyrethinkingg2p,
+      title={Fast, Not Fancy: Rethinking G2P with Rich Data and Rule-Based Models}, 
+      author={Mahta Fetrat Qharabagh and Zahra Dehghanian and Hamid R. Rabiee},
+      year={2025},
+      eprint={2505.12973},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.12973}, 
+}
 ```
 
 ---
@@ -111,6 +119,9 @@ Contributions and pull requests are welcome. Please open an issue to discuss the
 ---
 
 ### Additional Links  
-- [Paper PDF](#) (TODO: link to paper)  
-- [HomoFast eSpeak NG](#) (TODO: link to repo)  
-- [Homo-GE2PE Model](#) (TODO: link to repo)  
+- [Link to Paper](https://arxiv.org/abs/2505.12973)
+- [HomoRich Dataset (Huggingface)](https://huggingface.co/datasets/MahtaFetrat/HomoRich-G2P-Persian)
+- [HomoFast eSpeak NG](https://github.com/MahtaFetrat/HomoFast-eSpeak-Persian)
+- [Homo-GE2PE Model (Github)](https://github.com/MahtaFetrat/Homo-GE2PE-Persian/)
+- [Homo-GE2PE (Huggingface)](https://huggingface.co/MahtaFetrat/Homo-GE2PE-Persian)
+
