@@ -53,22 +53,39 @@ The HomoRich dataset includes both formats for broad compatibility. Below is a v
 ---
 
 ## Usage  
-### Loading the Dataset  
-The dataset is available both on Hugging Face and in this repository:
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Dataset-orange)](https://huggingface.co/datasets/MahtaFetrat/HomoRich-G2P-Persian)
 
-**Option 1: From Hugging Face**  
+Load the dataset directly from Hugging Face:
+
 ```python
-from datasets import load_dataset  
-dataset = load_dataset("AnonymousOwner/HomoRich")  # To be updated
+import pandas as pd
+from datasets import Dataset
+
+file_urls = [
+    "https://huggingface.co/datasets/MahtaFetrat/HomoRich-G2P-Persian/resolve/main/data/part_01.parquet",
+    "https://huggingface.co/datasets/MahtaFetrat/HomoRich-G2P-Persian/resolve/main/data/part_02.parquet",
+    "https://huggingface.co/datasets/MahtaFetrat/HomoRich-G2P-Persian/resolve/main/data/part_03.parquet"
+]
+
+# Combine into one dataset
+df = pd.concat([pd.read_parquet(url) for url in file_urls], ignore_index=True)
+dataset = Dataset.from_pandas(df)
+
+print(f"Loaded {len(dataset)} examples")
 ```
 
-**Option 2: From this repository**  
-
-You can access the dataset files directly from the [data folder](./data) of this repository.
-
-### Example Use Case: Homograph Disambiguation  
-```python  
-TODO  
+### Data Example
+```python
+{
+    'Grapheme': 'روی دیوار ننویسید.',
+    'Phoneme': 'ruye divAr nanevisid',
+    'Homograph Grapheme': 'رو',
+    'Homograph Phoneme': 'ru',
+    'Source': 'human', 
+    'Source ID': 0,
+    'Mapped Phoneme': 'ruye1 divar n/nevisid',
+    'Mapped Homograph Phoneme': 'ru'
+}
 ```
 ---
 
