@@ -115,6 +115,8 @@ The `scripts` folder contains two key notebooks used in the dataset creation and
 ---
 
 ## Citation  
+If you use this project in your work, please cite the corresponding paper:
+
 ```bibtex  
 @misc{qharabagh2025fastfancyrethinkingg2p,
       title={Fast, Not Fancy: Rethinking G2P with Rich Data and Rule-Based Models}, 
