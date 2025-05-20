@@ -70,8 +70,6 @@ file_urls = [
 # Combine into one dataset
 df = pd.concat([pd.read_parquet(url) for url in file_urls], ignore_index=True)
 dataset = Dataset.from_pandas(df)
-
-print(f"Loaded {len(dataset)} examples")
 ```
 
 ### Data Example
